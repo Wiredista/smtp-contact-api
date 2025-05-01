@@ -6,7 +6,10 @@
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/swagger": "^1.2.2",
+    "@types/nodemailer": "^6.4.17",
+    "elysia": "latest",
+    "nodemailer": "^6.10.1"
   },
   "devDependencies": {
     "bun-types": "latest"
