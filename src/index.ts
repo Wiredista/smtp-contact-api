@@ -1,4 +1,5 @@
 import { Elysia, t } from "elysia";
+import { swagger } from "@elysiajs/swagger";
 import nodemailer from "nodemailer";
 
 
@@ -34,6 +35,7 @@ transporter.verify((error, success) => {
 });
 
 const app = new Elysia()
+  .use(swagger())
   .post("/contact", ({ body }) => {
     const { name, email, phone, subject, message, customField1, customField2, customField3 } = body;
     const mailOptions = {
@@ -41,13 +43,13 @@ const app = new Elysia()
       to: SMTP_TO,
       subject: `${subject || SMTP_SUBJECT || "Contact Form Submission"}`,
       text: `
-        Name: ${name}
-        Email: ${email}
-        Phone: ${phone || "--"}
-        Message: ${message}
-        ${NAME_CUSTOM_FIELD_1}: ${customField1 || "--"}
-        ${NAME_CUSTOM_FIELD_2}: ${customField2 || "--"}
-        ${NAME_CUSTOM_FIELD_3}: ${customField3 || "--"}
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "--"}
+Message: ${message}
+${NAME_CUSTOM_FIELD_1}: ${customField1 || "--"}
+${NAME_CUSTOM_FIELD_2}: ${customField2 || "--"}
+${NAME_CUSTOM_FIELD_3}: ${customField3 || "--"}
       `,
     };
 
