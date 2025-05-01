@@ -1,5 +1,6 @@
 import { Elysia, t } from "elysia";
 import { swagger } from "@elysiajs/swagger";
+import { cors } from "@elysiajs/cors";
 import nodemailer from "nodemailer";
 
 
@@ -36,6 +37,7 @@ transporter.verify((error, success) => {
 
 const app = new Elysia()
   .use(swagger())
+  .use(cors({ origin: true }))
   .post("/contact", ({ body }) => {
     const { name, email, phone, subject, message, customField1, customField2, customField3 } = body;
     const mailOptions = {
