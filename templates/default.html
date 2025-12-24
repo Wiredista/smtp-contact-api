@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form Submission</title>
+</head>
+<body style="margin:0;padding:0;font-family: 'Lucida Sans', Arial, sans-serif;color:#f2f2f2;">
+<center>
+  <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;min-width:100%;">
+    <tr>
+      <td align="center">
+        <table width="600" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;width:100%;">
+          <tr>
+            <td style="background-color:#f96d00;padding:20px;text-align:center;color:#ffffff;">
+              <h1 style="margin:0;font-size:20px;line-height:1.2;font-weight:600;">Contact Form Submission</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background-color:#393e46;padding:20px;color:#f2f2f2;">
+              <h2 style="margin:0 0 12px 0;font-size:16px;font-weight:600;">Contact Form Submission from {{origin}}</h2>
+
+              <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="font-size:14px;color:#f2f2f2;border-collapse:collapse;">
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>Name:</strong> {{name}}</td></tr>
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>Email:</strong> {{email}}</td></tr>
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>Phone:</strong> {{phone}}</td></tr>
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>Message:</strong><div style="margin-top:6px;">{{message}}</div></td></tr>
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>{{customField1Name}}:</strong> {{customField1}}</td></tr>
+                <tr><td style="padding:6px 0;border-bottom:1px solid rgba(242,242,242,0.06);"><strong>{{customField2Name}}:</strong> {{customField2}}</td></tr>
+                <tr><td style="padding:6px 0;"><strong>{{customField3Name}}:</strong> {{customField3}}</td></tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td style="background-color:#222831;padding:12px;text-align:center;color:#f2f2f2;font-size:12px;">
+              <p style="margin:0;">Powered by <a href="https://github.com/Wiredista/smtp-contact-api" style="color:#f96d00;text-decoration:none;">Cybersun Contact API</a></p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</center>
+</body>
+</html>
